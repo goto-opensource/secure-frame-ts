@@ -1,0 +1,8 @@
+{
+    "reporter": "mocha-multi-reporters",
+    "reporterOptions": {
+        "configFile": "test/mocha-reporter.conf.json"
+    },
+    "require": "source-map-support/register",
+    "spec": "lib/test/**/*.spec.js"
+}

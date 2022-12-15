@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "outDir": "./lib/",
+    "preserveSymlinks": true,
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "incremental": true,
+    "composite": true,
+    "disableSourceOfProjectReferenceRedirect": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "include": [
+      "example/*",
+      "src/**/*",
+      "test/**/*"],
+  "exclude": ["node_modules"],
+  "references": []
+}

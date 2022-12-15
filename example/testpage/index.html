@@ -1,0 +1,131 @@
+<!-- Copyright (c) 2023 GoTo Group, Inc -->
+<!-- SPDX-License-Identifier: BSD 3-Clause "New" or "Revised" License -->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script type="module" src="./testpage.js"></script>
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<style>
+			html {
+				zoom: 90%;
+			}
+			body {
+				background: #e2e1e0;
+				text-align: center;
+				margin: 0px;
+				padding: 0px;
+				font-size: 9px;
+				color: #555;
+				font-family: Roboto;
+				text-align: -webkit-center;
+
+			}
+
+			table {
+				    margin: 10px;
+				    position: relative;
+				    left: -40px;
+			}
+
+			video {
+				object-fit: cover;
+				float: left;
+				background: #fff;
+				border-radius: 2px;
+				display: inline-block;
+				margin: 1rem;
+				position: relative;
+				box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+				transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+				padding:1px;
+				bottom: 0px;
+				width: 240px;
+				height: 135px;
+			}
+
+			.container {
+				top: 10px;
+				left: 10px;
+				display: inline-block;
+				margin: 0px;
+				padding: 0px;
+				width: 900px;
+
+			}
+			.container-video {
+				width: 33%;
+				display: inline-block;
+				position: relative;
+				font-size: 24px;
+				top: 5px;
+				margin-bottom: 10px;
+			}
+
+			button {
+				width: 270px;
+				margin: 15px;
+				float: left;
+			}
+
+			.action-button {
+				width: 270px;
+				margin: 15px;
+				float: none;
+			}
+
+			td {
+				margin: 5px;
+				padding: 5px;
+				text-align: center;
+			}
+		</style>
+
+	</head>
+	<body>
+
+	<div class="container">
+		<div class="container-video">Alice
+			<video id="alice_local" muted></video>
+			<button type="button" class="ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="alice_send_pw">Update Send PW: Alice</button>
+			<video id="alice_bob" muted></video>
+			<button type="button" class="ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="alice_bob_recv_pw">Update Recv PW: bob -> alice</button>
+			<video id="alice_carol" muted></video>
+			<button type="button" class="ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="alice_carol_recv_pw">Update Recv PW: carol -> alice</button>
+			<div style="clear:both;" id="alice_video_settings"></div>
+			<input class = "mdl-textfield__input" type = "text" id="alicePassword" placeholder="Alice Password">
+		</div>
+		<div class="container-video">Bob
+			<video id="bob_alice"></video>
+			<button type="button" class="ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="bob_alice_recv_pw">Update Recv PW: alice -> bob</button>
+			<video id="bob_local"></video>
+			<button type="button" class="ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="bob_send_pw">Update Send PW: bob</button>
+			<video id="bob_carol" muted></video>
+			<button type="button" class="ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="bob_carol_recv_pw">Update Recv PW: carol -> bob</button>
+			<div style="clear:both;" id="bob_video_settings"></div>
+			<input class = "mdl-textfield__input" type = "text" id="bobPassword" placeholder="Bob Password">
+		</div>
+		<div class="container-video">Carol
+			<video id="carol_alice"></video>
+			<button type="button" class="ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="carol_alice_recv_pw">Update Recv PW: alice -> carol</button>
+			<video id="carol_bob"></video>
+			<button type="button" class="ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="carol_bob_recv_pw">Update Recv PW: bob -> carol</button>
+			<video id="carol_local" muted></video>
+			<button type="button" class="ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="carol_send_pw">Update Send PW: carol</button>
+			<div style="clear:both;" id="carol_video_settings"></div>
+			<input class = "mdl-textfield__input" type = "text" id="carolPassword" placeholder="Carol Password">
+		</div>
+		<div class="container">
+			<button type="button" class="action-button ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="initButton">Initialize</button>
+			<button type="button" class="action-button ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="updateButton">UpdatePassphrases</button>
+		</div>
+		<div class="container">
+			<button type="button" class="action-button ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="connectButton">Connect</button>
+			<button type="button" class="action-button ready mdl-button mdl-button mdl-button--raised  mdl-button--accent" id="disconnectButton">Disconnect</button>
+		</div>
+	</div>
+	</body>
+
+</html>

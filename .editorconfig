@@ -1,0 +1,17 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+# utf-8 charset and removing space at the end of the line
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+
+[*.{json,html,css}]
+indent_size = 2
+
+[*.{ts,js}]
+indent_size = 4

@@ -1,0 +1,4 @@
+# Make git use LF as default
+* text=auto eol=lf
+
+.yarn/** filter=lfs diff=lfs merge=lfs -text

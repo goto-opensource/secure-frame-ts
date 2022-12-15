@@ -1,0 +1,6 @@
+{
+    "reporterEnabled": "spec, mocha-slow-test-reporter, mocha-junit-reporter",
+    "mochaJunitReporterReporterOptions": {
+        "mochaFile": "test-results/junit-results.xml"
+    }
+}

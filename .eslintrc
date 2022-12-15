@@ -1,0 +1,48 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "mocha": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        // Prettier must be last to override other configs
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+        "complexity": [
+            0,
+            11
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": ["off"],
+        "@typescript-eslint/no-explicit-any": ["off"],
+        "@typescript-eslint/no-non-null-assertion": ["off"],
+        "prettier/prettier": [
+            "error",
+            {
+                "printWidth": 100,
+                "parser": "typescript",
+                "useTabs": false,
+                "semi": true,
+                "singleQuote": true,
+                "trailingComma": "es5",
+                "bracketSpacing": true,
+                "arrowParens": "always",
+                "tabWidth": 4
+            }
+        ]
+    },
+    "globals": {
+        "define": "readonly"
+    }
+}
